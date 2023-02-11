@@ -60,7 +60,7 @@ export default function Order() {
                 />
               </div>
               <div className=" md:block p-3">
-                <div className='text-white text-2xl '>  Employee</div>
+                <div className='text-white text-2xl '> Staff</div>
               </div>
             </div>
             <div className="Logout">
