@@ -21,23 +21,20 @@ export const gridOrderImage = (props) => (
 );
 
 export default function gridOrderText(props) {
-  const text = props.OrderItems;
+  const item = props.OrderItems;
+  const quanity = props.Quanity;
   return <div>
     {
-      text.map((text) =>
-        <p key={text}>
-          {text}&ensp;&ensp;&ensp;x5
+      item.map((item,index) =>
+        <p key={item}>
+          {item}
+          &ensp;&ensp;&ensp;
+          x{quanity[index]}
         </p>)
     }
   </div>
 
-
-
-
-
 };
-
-
 
 export const gridOrderStatus = (props) => (
   <button
@@ -61,7 +58,7 @@ export const ordersGrid = [
   },
 
   {
-
+    field:"Item",
     headerText: 'Item',
     width: '100',
     template: gridOrderText,
@@ -108,6 +105,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -121,6 +119,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -134,6 +133,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -147,6 +147,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -160,6 +161,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -173,6 +175,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -186,6 +189,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -199,6 +203,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -212,6 +217,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -225,6 +231,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -238,6 +245,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -251,6 +259,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -264,6 +273,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -277,6 +287,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -290,6 +301,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -303,6 +315,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -316,6 +329,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -329,6 +343,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -342,6 +357,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -355,6 +371,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -368,6 +385,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -381,6 +399,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -394,6 +413,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -407,6 +427,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -420,6 +441,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -433,6 +455,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -446,6 +469,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -459,6 +483,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -472,6 +497,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -485,6 +511,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -498,6 +525,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -511,6 +539,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -524,6 +553,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -537,6 +567,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -550,6 +581,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -563,6 +595,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -576,6 +609,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -589,6 +623,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -602,6 +637,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -615,6 +651,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -628,6 +665,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -641,6 +679,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -654,435 +693,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: ['quan','suc','sinh'],
+    Quanity: [3,4,5],
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
@@ -1094,22 +705,4 @@ export const ordersData = [
 ];
 
 
-export const contextMenuItems = [
-  'AutoFit',
-  'AutoFitAll',
-  'SortAscending',
-  'SortDescending',
-  'Copy',
-  'Edit',
-  'Delete',
-  'Save',
-  'Cancel',
-  'PdfExport',
-  'ExcelExport',
-  'CsvExport',
-  'FirstPage',
-  'PrevPage',
-  'LastPage',
-  'NextPage',
-];
 
