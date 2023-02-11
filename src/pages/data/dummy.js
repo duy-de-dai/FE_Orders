@@ -72,6 +72,12 @@ export const ordersGrid = [
     template: gridOrderText,
     textAlign: 'Center',
   },
+  {
+    field: 'Voucher',
+    headerText: 'Voucher',
+    width: '100',
+    textAlign: 'Center',
+  },
 
   {
     field: 'TotalPrice',
@@ -79,15 +85,13 @@ export const ordersGrid = [
     format: 'C2',
     textAlign: 'Center',
     
-    width: '150',
+    width: '100',
   },
   
-  
-
   {
     field: 'Address',
     headerText: 'Address',
-    width: '150',
+    width: '120',
     textAlign: 'Center',
   },
   {
@@ -116,6 +120,7 @@ export const ordersData = [
     Quanity: [3,4,5],
     Address: 'Bạch Mai',
     CreatedAt:'11/11/2002',
+    Voucher:'100%',
     Status: 'pending',
     StatusBg: '#FB9678',
     
