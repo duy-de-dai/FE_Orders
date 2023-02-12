@@ -83,7 +83,7 @@ export default function Order() {
 
       <div className="footer">
         <p className=" text-white text-xl text-center italic m-20">
-          © 2022 All rights reserved by Shoppy.com
+          Website bán coffee trực tuyến
         </p>
       </div>
     </>

@@ -1,12 +1,8 @@
-import React from 'react';
 
-import product1 from './product1.jpg';
-import product2 from './product2.jpg';
-import product3 from './product3.jpg';
-import product4 from './product4.jpg';
-import product5 from './product5.jpg';
-import product6 from './product6.jpg';
-import product7 from './product7.jpg';
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { fetchInstant } from "../../config";
+import { METHOD } from "../../constants";
 
 export const gridOrderImage = (props) => (
   <div>
@@ -20,7 +16,7 @@ export const gridOrderImage = (props) => (
   </div>
 );
 
-export default function gridOrderText(props) {
+export  function gridOrderText(props) {
   const item = props.OrderItems;
   const quanity = props.Quanity;
   return <div>
@@ -29,80 +25,89 @@ export default function gridOrderText(props) {
         <p key={item}>
           {item}
           &ensp;&ensp;&ensp;
-          x{quanity[index]}
+          
         </p>)
     }
   </div>
 
 };
 
-export const gridOrderStatus = (props) => (
-  <button
+export default function gridOrderStatus(props){
+  console.log(props)
+  let status=''
+  let statusBg=''
+  if (props.status == 0){
+    status = 'Pending'
+    statusBg='#FEC90F';
+
+  }
+  else{
+    status = 'Successfull'
+    statusBg='#8BE78B';
+  }
+  
+  return <button
     type="button"
-    style={{ background: props.StatusBg }}
+    style={{ background: statusBg }}
     className="text-white py-1 px-2 capitalize rounded-2xl text-md"
+    
   >
     
-    {props.Status}
+    {status}
     
   </button>
-);
+};
 
 
 
 
 export const ordersGrid = [
   {
-    field: 'OrderID',
+    field: 'id',
     headerText: 'Order ID',
-    width: '70',
+    width: '100',
     textAlign: 'Center',
   },
 
   {
-    field: 'CustomerName',
+    field: 'user_name',
     headerText: 'Customer Name',
     width: '120',
     textAlign: 'Center',
   },
 
   {
-    field:"Item",
+    field:"name",
     headerText: 'Item',
     width: '100',
-    template: gridOrderText,
+    
     textAlign: 'Center',
   },
-  {
-    field: 'Voucher',
-    headerText: 'Voucher',
-    width: '100',
-    textAlign: 'Center',
-  },
+  
 
   {
-    field: 'TotalPrice',
+    field: 'total_price',
     headerText: 'Total Price',
-    format: 'C2',
+    
     textAlign: 'Center',
     
     width: '100',
   },
   
   {
-    field: 'Address',
+    field: 'shipping_address',
     headerText: 'Address',
     width: '120',
     textAlign: 'Center',
   },
   {
-    field:"CreatedAt",
+    field:"createdAt",
     headerText: 'Create Time',
-    width: '100',
+    width: '170',
     textAlign: 'Center',
   },
   { 
-    field: 'Status',
+    field: 'status',
     headerText: 'Status',
     template: gridOrderStatus, 
     textAlign: 'Center',
@@ -113,464 +118,6 @@ export const ordersGrid = [
 
 
 export const ordersData = [
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Voucher:'100%',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalPrice: 32.38,
-    OrderItems: ['rượu','ma túy','thuốc phiện'],
-    Quanity: [3,4,5],
-    Address: 'Bạch Mai',
-    CreatedAt:'11/11/2002',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    
-  },
-  
   
 ];
 
