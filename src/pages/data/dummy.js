@@ -64,24 +64,24 @@ export default function gridOrderStatus(props){
 export const ordersGrid = [
   {
     field: 'id',
-    headerText: 'Order ID',
-    width: '100',
-    textAlign: 'Center',
+    headerText: 'ID',
+    width: '80',
+    textAlign: 'Left',
   },
 
   {
     field: 'user_name',
     headerText: 'Customer Name',
-    width: '120',
-    textAlign: 'Center',
+    width: '150',
+    textAlign: 'Left',
   },
 
   {
     field:"name",
     headerText: 'Item',
-    width: '100',
+    width: '170',
     
-    textAlign: 'Center',
+    textAlign: 'Left',
   },
   
 
@@ -103,15 +103,15 @@ export const ordersGrid = [
   {
     field:"createdAt",
     headerText: 'Create Time',
-    width: '170',
-    textAlign: 'Center',
+    width: '200',
+    textAlign: 'Left',
   },
   { 
     field: 'status',
     headerText: 'Status',
     template: gridOrderStatus, 
     textAlign: 'Center',
-    width: '120',
+    width: '100',
   },
 ];
 

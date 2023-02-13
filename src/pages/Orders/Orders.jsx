@@ -74,7 +74,7 @@ const Orders = () => {
 
           {ordersGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}
 
-          <ColumnDirective headerText='' width='150' template={gridTemplate} textAlign='Right' isPrimaryKey='true' />
+          <ColumnDirective headerText='' width='120' template={gridTemplate} textAlign='Right' isPrimaryKey='true' />
 
 
         </ColumnsDirective>
