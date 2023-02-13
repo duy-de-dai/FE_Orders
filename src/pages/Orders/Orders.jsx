@@ -19,7 +19,7 @@ const Orders = () => {
   const gridTemplate = (props) => {
     setSubmit(false);
     return (<div>
-      <button className="empData bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Xác nhận</button>
+      <button className="empData  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 border border-blue-700 rounded">Xác nhận</button>
     </div>);
   };
   const recordClick = (args) => {
@@ -65,6 +65,7 @@ const Orders = () => {
         allowPaging
         allowSorting
         toolbar={toolbarOptions}
+        allowTextWrap={true}
 
         onClick={recordClick}
         ref={g => grid = g}

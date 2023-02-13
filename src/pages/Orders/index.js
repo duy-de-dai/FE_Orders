@@ -3,6 +3,7 @@ import Orders2 from './Orders2';
 import Orders3 from './Orders3';
 
 import LogOut from './LogOut';
+import CoffeeLogo from '../../../../public/asset';
 
 import { Disclosure } from '@headlessui/react'
 import React, { useEffect, useState } from "react";
@@ -46,7 +47,7 @@ export default function Order() {
               <div className="flex-shrink-0">
                 <img
                   className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  src=""
                   alt="Your Company"
                 />
               </div>

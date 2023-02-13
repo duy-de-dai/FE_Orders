@@ -48,7 +48,7 @@ export default function gridOrderStatus(props){
   
   return <button
     type="button"
-    style={{ background: statusBg }}
+    style={{ background: statusBg}}
     className="text-white py-1 px-2 capitalize rounded-2xl text-md"
     
   >
@@ -66,22 +66,22 @@ export const ordersGrid = [
     field: 'id',
     headerText: 'ID',
     width: '80',
-    textAlign: 'Left',
+    textAlign: 'Center',
   },
 
   {
     field: 'user_name',
     headerText: 'Customer Name',
-    width: '150',
-    textAlign: 'Left',
+    width: '120',
+    textAlign: 'Center',
   },
 
   {
     field:"name",
     headerText: 'Item',
-    width: '170',
+    width: '130',
     
-    textAlign: 'Left',
+    textAlign: 'Center',
   },
   
 
@@ -97,14 +97,14 @@ export const ordersGrid = [
   {
     field: 'shipping_address',
     headerText: 'Address',
-    width: '120',
+    width: '150',
     textAlign: 'Center',
   },
   {
     field:"createdAt",
     headerText: 'Create Time',
     width: '200',
-    textAlign: 'Left',
+    textAlign: 'Center',
   },
   { 
     field: 'status',
